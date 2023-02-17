@@ -127,7 +127,7 @@ def pytest_configure(config: pytest.Config) -> None:
         "markers", "no_fail_on_log_exception: mark test to not fail on logged exception"
     )
     logging.basicConfig(level=logging.DEBUG)
-    logging.getLogger("sqlalchemy.engine").setLevel(logging.DEBUG)
+    logging.getLogger("sqlalchemy.engine").setLevel(logging.INFO)
 
 
 def pytest_runtest_setup() -> None:
